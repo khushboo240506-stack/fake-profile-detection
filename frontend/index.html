@@ -1,0 +1,75 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfileGuard - Fake Profile Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>ProfileGuard</h2>
+        <p>NLP & Machine Learning</p>
+    </header>
+
+    <main>
+        <h1>Fake Profile Detection</h1>
+        <p class="subtitle">
+            Analyze social media profile information using machine learning.
+        </p>
+
+        <section class="card">
+            <h2>Enter Profile Details</h2>
+
+            <form id="profileForm">
+
+                <label for="username">Username</label>
+                <input id="username" type="text"
+                       placeholder="Enter username">
+
+                <label for="bio">Profile Bio</label>
+                <textarea id="bio" rows="4" required
+                          placeholder="Enter profile description"></textarea>
+
+                <label for="followers">Followers</label>
+                <input id="followers" type="number" min="0"
+                       value="100" required>
+
+                <label for="following">Following</label>
+                <input id="following" type="number" min="0"
+                       value="150" required>
+
+                <label for="posts">Number of Posts</label>
+                <input id="posts" type="number" min="0"
+                       value="20" required>
+
+                <label for="age">Account Age (Days)</label>
+                <input id="age" type="number" min="0"
+                       value="180" required>
+
+                <button type="submit" id="analyzeButton">
+                    Analyze Profile
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+            <section id="result" hidden>
+                <h2>Analysis Result</h2>
+                <h3 id="prediction"></h3>
+                <p>Model confidence: <span id="confidence"></span></p>
+                <p id="notice"></p>
+            </section>
+        </section>
+
+        <p class="footer">
+            BCA 5th Semester Project | NLP + Machine Learning
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
