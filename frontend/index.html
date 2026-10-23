@@ -4,72 +4,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProfileGuard - Fake Profile Detection</title>
+
+    <title>Fake Profile Detection | NLP & Machine Learning</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h2>ProfileGuard</h2>
-        <p>NLP & Machine Learning</p>
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">F</span>
+            <span>Fake<span class="logo-highlight">Shield</span></span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#detector">Profile Detector</a>
+            <a href="#about">About Project</a>
+        </nav>
+
+        <a href="#detector" class="nav-button">Try Detector</a>
     </header>
 
     <main>
-        <h1>Fake Profile Detection</h1>
-        <p class="subtitle">
-            Analyze social media profile information using machine learning.
-        </p>
 
-        <section class="card">
-            <h2>Enter Profile Details</h2>
+        <section class="hero" id="home">
 
-            <form id="profileForm">
+            <div class="hero-content">
 
-                <label for="username">Username</label>
-                <input id="username" type="text"
-                       placeholder="Enter username">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    MACHINE LEARNING PROJECT
+                </div>
 
-                <label for="bio">Profile Bio</label>
-                <textarea id="bio" rows="4" required
-                          placeholder="Enter profile description"></textarea>
+                <h1>
+                    Detect Fake Profiles.<br>
+                    <span>Build a Safer Social Media.</span>
+                </h1>
 
-                <label for="followers">Followers</label>
-                <input id="followers" type="number" min="0"
-                       value="100" required>
+                <p class="hero-description">
+                    Analyze social media profile information using
+                    Natural Language Processing and Machine Learning
+                    to estimate whether an account may be fake or genuine.
+                </p>
 
-                <label for="following">Following</label>
-                <input id="following" type="number" min="0"
-                       value="150" required>
+                <div class="hero-actions">
+                    <a href="#detector" class="primary-button">
+                        Analyze a Profile →
+                    </a>
 
-                <label for="posts">Number of Posts</label>
-                <input id="posts" type="number" min="0"
-                       value="20" required>
+                    <a href="#about" class="secondary-button">
+                        Explore Project
+                    </a>
+                </div>
 
-                <label for="age">Account Age (Days)</label>
-                <input id="age" type="number" min="0"
-                       value="180" required>
+                <div class="hero-note">
+                    <span>✓</span> ML-based prediction
+                    <span>✓</span> NLP-powered analysis
+                    <span>✓</span> Instant result
+                </div>
 
-                <button type="submit" id="analyzeButton">
-                    Analyze Profile
-                </button>
+            </div>
 
-            </form>
+            <div class="hero-visual">
 
-            <div id="message"></div>
+                <div class="visual-card">
 
-            <section id="result" hidden>
-                <h2>Analysis Result</h2>
-                <h3 id="prediction"></h3>
-                <p>Model confidence: <span id="confidence"></span></p>
-                <p id="notice"></p>
-            </section>
+                    <div class="visual-top">
+                        <span class="visual-symbol">◎</span>
+                        <span class="scan-label">PROFILE ANALYSIS</span>
+                        <span class="live-dot"></span>
+                    </div>
+
+                    <div class="profile-avatar">AI</div>
+
+                    <h3>Social Profile Analyzer</h3>
+
+                    <p class="visual-subtitle">
+                        Intelligent account assessment
+                    </p>
+
+                    <div class="scan-line"></div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">01</span>
+                        <div>
+                            <strong>Profile Information</strong>
+                            <p>Username, bio and account activity</p>
+                        </div>
+                    </div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">02</span>
+                        <div>
+                            <strong>Machine Learning</strong>
+                            <p>Evaluates the submitted information</p>
+                        </div>
+                    </div>
+
+                    <div class="visual-feature">
+                        <span class="feature-icon">03</span>
+                        <div>
+                            <strong>Prediction Result</strong>
+                            <p>Displays the model's estimate</p>
+                        </div>
+                    </div>
+
+                    <div class="visual-footer">
+                        NLP <span>•</span> MACHINE LEARNING
+                    </div>
+
+                </div>
+
+                <div class="decoration decoration-one"></div>
+                <div class="decoration decoration-two"></div>
+
+            </div>
+
         </section>
 
-        <p class="footer">
-            BCA 5th Semester Project | NLP + Machine Learning
-        </p>
+        <section class="detector-section" id="detector">
+
+            <div class="section-heading">
+                <span class="section-tag">PROFILE CHECK</span>
+
+                <h2>Analyze a Social Media Profile</h2>
+
+                <p>
+                    Enter the available profile details to generate a prediction.
+                </p>
+            </div>
+
+            <div class="detector-card">
+
+                <div class="form-heading">
+                    <div class="form-icon">◎</div>
+
+                    <div>
+                        <h3>Profile Details</h3>
+                        <p>Complete the fields below</p>
+                    </div>
+                </div>
+
+                <form id="profileForm">
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="e.g. user12345"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Profile Bio</label>
+
+                        <textarea
+                            id="bio"
+                            name="bio"
+                            rows="3"
+                            placeholder="Enter the profile description"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="followers">Followers</label>
+
+                            <input
+                                type="number"
+                                id="followers"
+                                name="followers"
+                                min="0"
+                                value="100"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="following">Following</label>
+
+                            <input
+                                type="number"
+                                id="following"
+                                name="following"
+                                min="0"
+                                value="150"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="posts">Number of Posts</label>
+
+                            <input
+                                type="number"
+                                id="posts"
+                                name="posts"
+                                min="0"
+                                value="20"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Account Age (Days)</label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                name="account_age_days"
+                                min="0"
+                                value="180"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="analyzeButton"
+                        class="analyze-button"
+                    >
+                        Analyze Profile <span>→</span>
+                    </button>
+
+                </form>
+
+                <p
+                    id="message"
+                    class="message"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+                <div
+                    id="result"
+                    class="result"
+                    hidden
+                    aria-live="polite"
+                >
+                    <h3 id="prediction"></h3>
+
+                    <p>
+                        Model Confidence:
+                        <strong id="confidence"></strong>
+                    </p>
+
+                    <p id="notice" class="result-notice"></p>
+                </div>
+
+            </div>
+
+            <p class="disclaimer">
+                Note: Predictions are experimental estimates and may not
+                accurately identify every fake or genuine profile.
+            </p>
+
+        </section>
+
+        <section class="about-section" id="about">
+
+            <div class="section-heading">
+                <span class="section-tag">ABOUT THE PROJECT</span>
+
+                <h2>How the System Works</h2>
+
+                <p>
+                    A machine learning pipeline for social media profile assessment.
+                </p>
+            </div>
+
+            <div class="info-grid">
+
+                <article class="info-card">
+                    <span class="info-number">01</span>
+
+                    <h3>Input Data</h3>
+
+                    <p>
+                        The user enters profile details such as bio,
+                        followers, following, posts and account age.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-number">02</span>
+
+                    <h3>ML Analysis</h3>
+
+                    <p>
+                        The submitted information is processed by the
+                        trained machine learning model.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="info-number">03</span>
+
+                    <h3>Prediction</h3>
+
+                    <p>
+                        The application displays the model's predicted
+                        classification and confidence when available.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
 
+    <footer>
+        <a href="#home" class="footer-logo">FakeShield</a>
+
+        <p>BCA 5th Semester Project | NLP & Machine Learning</p>
+
+        <p class="footer-small">
+            Academic prototype for educational purposes.
+        </p>
+    </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>
