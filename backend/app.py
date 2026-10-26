@@ -15,6 +15,10 @@ CORS(app)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env")
+print("DB_HOST is set:", bool(os.getenv("DB_HOST")))
+print("DB_PORT:", os.getenv("DB_PORT", "3306"))
+print("DB_USER is set:", bool(os.getenv("DB_USER")))
+print("DB_NAME:", os.getenv("DB_NAME"))
 
 MODEL_PATH = BASE_DIR / "model" / "fake_profile_model.joblib"
 
@@ -111,6 +115,7 @@ def predict():
     cursor = None
 
     try:
+        
         connection = get_db_connection()
         cursor = connection.cursor()
 
